@@ -10,7 +10,19 @@
 </head>
 
 <body>
-    <a href="./AtiCurriculo.html">Voltar</a>
+    <a href="./AtiCurriculo.html">Voltar</a><P></P>
+    <table>    
+        <tr>
+            <td>Nome</td>
+            <td>Idade</td>
+            <td>Profissão</td>
+        </tr>
+        <tr>
+            <td>Jhonny Five</td>
+            <td>15500</td>
+            <td>"Desempregado"</td>
+        </tr>
+    </table>
     <p></p><img src="images/BUGATTI-DIVO-LADY-BUG.jpg" alt="Foto de quando era um transformen" height="120px" width="120px">
     <p>Foto de quando era deputado de AllSpark </p>
     <hr>
