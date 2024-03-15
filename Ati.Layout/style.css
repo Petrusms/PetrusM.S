@@ -1,0 +1,22 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Layout */
+header{
+    background-color: #FFBA86;
+}
+
+main{
+
+}
+
+footer{
+    background: #FFBA86;
+}
+.container{
+    width: 80%;
+    margin: 0 auto 0 auto ;/*top right bottom left*/
+}
