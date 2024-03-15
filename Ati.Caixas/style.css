@@ -1,1 +1,71 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+
+    background-color: #720455;
+
+    color: #FFE7E7;
+}
+
+div{
+
+    background: #944E63;
+    margin: 20px;
+    padding: 50px;
+    border: solid 3px #030637;
+    border-radius: 10px; /*serve para deixar arredondado*/
+}
+/* # se refere a ID e . para class */
+#C3{
+    background: #3C0753;
+    display: none;
+}
+.Small-Box{
+
+    background: #392467;
+    display: none;
+
+}
+
+.container{
+
+    width:1120px;
+    min-height: 400px;
+    padding: 0px;
+    overflow: auto;
+    margin: 20px auto;
+    
+
+}
+
+.bloco{
+
+    box-sizing: border-box;
+    width: 200px;
+    height: 200px;
+    margin: 0px;
+
+}
+
+.B1{
+    background: #6420AA;
+    float: left;
+    width: 50%;
+}
+.B2{
+    background: #A367B1;
+    float: left;
+    width: 50%;
+}
+.B3{
+    background: #FF7ED4;
+    float: left;
+}
+.B4{
+    background: #FFB5DA;
+    float: left;
+}
 
