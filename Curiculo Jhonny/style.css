@@ -1,1 +1,36 @@
+body{
+    background-color: #FFF5E4;
+    width: 60%;
+    margin: 0 auto;
+    padding: 2% 0;
+}
 
+main{
+    font-family: "Sanchez", Arial, Helvetica, sans-serif;
+    color: #444;
+    line-height: 1.5;
+    background-color: white;
+    border-radius: 10px;
+}
+
+h1, h2{
+    color: rgb(140, 76, 8)
+}
+
+.sec{
+    margin-top: 0;
+    margin: 20px 20px;
+    padding-bottom: 5px;
+    border-top: solid 1px gray;
+   
+}
+
+.inicio{
+    margin-top: 0;
+    padding-bottom: 5px;
+    padding: 20px;
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+    font-size: 1.2em;
+}
