@@ -1,0 +1,110 @@
+<!-- TAG = 1
+Classe = 10
+ID = 100 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Query</title>
+
+    <style>
+        body {
+            background-color: chartreuse;
+        }
+
+        h1 {
+            font-size: 40px;
+        }
+
+        .img img{
+            max-width: 100%;
+            min-width: 100%;
+        }
+
+        .img-pequena {
+            display: none;
+        }
+
+        /* Especifico para desktop */
+        @media (min-width:1024px) {
+            
+            body {
+                background-color:violet;
+                color: aliceblue;
+            }
+
+            h1 {
+                font-size: 50px;
+            }
+
+            .img-pequena{
+                display: none;
+            }
+
+            .img-grande{
+                display: block;
+            }
+        }
+        /* Especifico para tablets */
+        @media (min-width:768px) and (max-width:1023px) {
+            
+            body {
+                background-color:blueviolet;
+                color: aliceblue;
+            }
+
+            h1 {
+                font-size: 50px;
+            }
+
+            .img-pequena{
+                display: none;
+            }
+
+            .img-grande{
+                display: block;
+            }
+        }
+        /* Especifico para smatphones ou para telas menores */
+        @media (max-width:767px) {
+            
+            body {
+                background-color:crimson;
+                color: aliceblue;
+            }
+
+            h1 {
+                font-size: 50px;
+            }
+
+            .img-pequena{
+                display: block;
+            }
+
+            .img-grande{
+                display: none;
+            }
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <h1>Media Query</h1>
+
+    <div class="img img-grande">
+        <img src="https://placehold.co/1200x400" alt="">
+    </div>
+    <div class="img img-pequena">
+        <img src="https://placehold.co/500x400" alt="">
+    </div>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima perferendis esseDocumentreprehenderit quis vel.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima perferendis esseDocumentreprehenderit quis vel.</p>
+    
+</body>
+</html>
