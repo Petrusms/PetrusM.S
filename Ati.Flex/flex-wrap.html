@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex-Wrap Container</title>
+
+    <link rel="stylesheet" href="default.css">
+
+    <style>
+        .flex-container {
+            display: flex;
+            /* flex-wrap: nowrap; não quebra*/
+            flex-wrap: wrap; /* quebra */
+
+        }
+
+        .flex-container div {
+            flex: 1;
+        }
+
+        .flex-container .red{
+            flex: 5;
+            order: 2;
+        }
+
+        .flex-container .yellow{
+            order: -3;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <h1>FlexBox</h1>
+
+    <h2>Flex container</h2>
+
+    <div class="flex-container">
+
+        <div class="red">
+            red
+        </div>
+
+        <div class="green">
+            green
+        </div>
+
+        <div class="blue">
+            blue
+        </div>
+
+        <div class="yellow">
+            yellow
+        </div>
+
+    </div>
+    
+</body>
+
+</html>
