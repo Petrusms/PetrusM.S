@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alinhamento</title>
+
+    <style>
+        body{
+            background-color: rgb(68, 131, 131);
+            display: flex;
+            justify-content: center;
+        }
+        .container{
+            display: flex;
+            background-color: blueviolet;
+            width: 500px;
+            height: 500px;
+
+            flex-direction: row;
+            justify-content: center;
+            /*justify-content: space-evenly;  deixa todo espaçamento igual*/
+            /* justify-content: space-between;  gruda nos cantos com espaçamento entre os itens*/
+            /* justify-content: space-around; da um espaço que soma com outro*/
+
+            /*align-items: center;alinha no centro, mas não funciona se quebrar a linha*/
+            align-content: center;
+            flex-wrap: wrap;    
+        }
+
+        .item{
+            width: 200px;
+            height: 70px;
+            background-color: aquamarine;
+            border: dotted 1px #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .item:nth-child(4){
+            background-color: red;
+            width: 100px;
+            height: 35px;
+            align-self: flex-end;
+            justify-self: flex-end;
+
+            margin-left: 100px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="item">
+            1
+        </div>
+
+        <div class="item">
+            2
+        </div>
+
+        <div class="item">
+            3
+        </div>
+
+        <div class="item">
+            4
+        </div>
+    </div>
+</body>
+
+</html>
