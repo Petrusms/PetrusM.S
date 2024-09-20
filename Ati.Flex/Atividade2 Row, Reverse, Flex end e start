@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        body {
+            font-family: "Catamaran", sans-serif;
+            background-color: #19242f;
+            color: #eee;
+        }
+
+        body {
+            margin: 50px;
+        }
+
+        .container {
+            display: flex;
+            gap: 10px;
+            justify-content: flex-start; /* muda o lugar dos itens*/
+            flex-direction: row-reverse; /* mudar as direções dos itens*/
+            height: 150px;
+            background-color: aqua;
+        }
+
+        .item {
+            background-color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="item">
+            item A
+        </div>
+
+        <div class="item">
+            item B
+        </div>
+    </div>
+</body>
+
+</html>
