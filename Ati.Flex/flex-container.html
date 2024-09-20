@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Container</title>
+
+    <link rel="stylesheet" href="default.css">
+
+    <style>
+
+        .flex-container {
+            display: flex;
+        }
+
+        .flex-container .flex-item {
+            flex: 1;
+        }
+
+        .direction-column {
+            flex-direction: column;
+        }
+
+        .row-reverse {
+            flex-direction: row-reverse;
+        }
+
+        .column-reverse {
+            flex-direction: column-reverse;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <h1>Flex</h1>
+
+    <h2>Flex container</h2>
+
+    <div class="flex-container">
+
+        <div class="flex-item red">1</div>
+        <div class="flex-item green">2</div>
+        <div class="flex-item blue">3</div>
+        <div class="flex-item yellow">4</div>
+
+    </div>
+
+
+    <h2>Flex Direction: column</h2>
+
+    <div class="flex-container direction-column">
+
+        <div class="flex-item red">1</div>
+        <div class="flex-item green">2</div>
+        <div class="flex-item blue">3</div>
+        <div class="flex-item yellow">4</div>
+
+    </div>
+    
+
+    <h2>Flex Direction: row reverse</h2>
+
+    <div class="flex-container row-reverse">
+
+        <div class="flex-item red">1</div>
+        <div class="flex-item green">2</div>
+        <div class="flex-item blue">3</div>
+        <div class="flex-item yellow">4</div>
+
+    </div>
+
+
+    <h2>Flex Direction: column reverse</h2>
+
+    <div class="flex-container column-reverse">
+
+        <div class="flex-item red">1</div>
+        <div class="flex-item green">2</div>
+        <div class="flex-item blue">3</div>
+        <div class="flex-item yellow">4</div>
+
+    </div>
+    
+</body>
+</html>
