@@ -102,6 +102,10 @@
     border-radius: 10px;
     overflow: hidden;
     padding-bottom: 20px;
+    border-style: solid;
+    border-width: 1px 1px 1px 1px;
+    border-color: #005CAAC7;
+    box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.3);
 }
 
 .card-noticias .card-noticias-image{
@@ -115,12 +119,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #00485e9c;
+    background-color: #00315EBD;
     position: absolute;
     top: 170px;
     width: 100%;
     color: #fff;
     font-weight: 300;
+    color: #50C4FF;;;
 }
 
 
