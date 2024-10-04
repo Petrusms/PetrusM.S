@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Script</title>
+
+</head>
+<body>
+    <h1>Hello World</h1>
+    <h1>The life's goood!</h1>
+    <p id="1">???</p>
+    <p class="2">1</p>
+    <p class="2">2</p>
+    <p class="2">3</p>
+    <p>???</p>
+    <p>???</p>
+    <p>???</p>
+    <p>???</p>
+    <p>???</p>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+    </ul>
+    
+
+    <script>
+        let elementos = document.getElementsByTagName('h1')
+        elementos[1].innerText = "The life is not good, the life is a strawberry"
+        console.log(elementos)
+
+        let p = document.getElementById('1')
+        p.innerText  = "Ola"
+        p.style.fontSize = '50px'
+
+        let pa = document.getElementsByClassName('2')
+        pa[0].style.background = "blue";
+        pa[1].style.background = "blue";
+        pa[2].style.background = "blue";
+
+        pa[0].style.color = "white";
+        pa[1].style.color = "white";
+        pa[2].style.color = "white";
+
+        let par = document.getElementsByTagName('p')
+        par[4].innerText  = "4"
+        par[5].innerText  = "5"
+        par[6].innerText  = "6"
+        par[7].innerText  = "7"
+        par[8].innerText  = "8"
+
+        let pra = document.querySelectorAll('li')
+        pra[0].style.color = "red"
+        pra[1].style.color = "green"
+        pra[2].style.color = "purple"
+        pra[3].style.color = "blue"
+        pra[4].style.color = "pink"
+        
+    </script>
+</body>
+</html>
