@@ -10,10 +10,22 @@
 
     <button ondblclick="mensagem('o botao foi clicado 2x')">clique aqui 2x</button>
 
+    <img src="Waddles_the_Pig.webp" alt="" 
+    onclick="alterartext('inhonk'), mensagem('inhonk')"
+    onmouseenter="mensagem('para de passar a mão')">
+    <p>???</p>
+
+
     <script>
         function mensagem(msg){
             console.log(msg)
         }
+
+        let p = document.querySelector('p')
+        function alterartext(msg){
+            p.innerText = msg
+        }
+        
     </script>
 </body>
 </html>
