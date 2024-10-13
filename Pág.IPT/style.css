@@ -9,6 +9,7 @@
 .site{
     display: flex;
     flex-direction: column;
+    background-image: linear-gradient(180deg, #00315E 0%, #000825 100%);
 }
 
 .conteudo{
@@ -17,27 +18,103 @@
     /* border: dotted 2px #000; */
 }
 
-.cabecalho{
+header {
     height: 120px;
     background-color: transparent;
     background-image: linear-gradient(180deg, #FFFFFF 0%, #DBDBDB 100%);
 }
 
-.cabecalho .conteudo{
+header .conteudo{
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.cabecalho .conteudo .logo{
+header .conteudo .logo{
     width: 165px;
 }
 
-.cabecalho .conteudo .menus ul{
+header .conteudo .menus ul{
     display: flex;
-    gap: 20px;
+    gap: 15px;
     list-style: none;
+    margin-top: 20px;
+}
+
+header .conteudo .menus ul a{
+    text-decoration: none;
+}
+
+.fundo-lupa .lupa{
+    padding: 7px;
+    border-radius: 50px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #9B9B9B;
+}
+
+.fundo .icons{
+    color: white;
+    background-color: #9B9B9B;
+    border-radius: 50px;
+    padding: 7px 10px;
+}
+
+.fundo .icons:hover{
+    color: #9B9B9B;
+    background-color: transparent;
+    background-image: linear-gradient(180deg, #FFFFFF 0%, #DBDBDB 100%);
+}
+
+.fundo .icons-PH{
+    color: white;
+    background-color: #9B9B9B;
+    border-radius: 50px;
+    padding: 7px 15px;
+}
+
+.fundo .icons-PH:hover{
+    color: #9B9B9B;
+    background-color: transparent;
+    background-image: linear-gradient(180deg, #FFFFFF 0%, #DBDBDB 100%);
+}
+
+.fundo-blog .blog{
+    background-color: transparent;
+    background-image: linear-gradient(180deg, #0082C4 0%, #003C6A 100%);
+    color: white;
+    border-radius: 50px;
+    padding: 5px 15px;
+    border-style: solid;
+    border-width: 1px 1px 1px 1px;
+    border-color: #0082C4;
+}
+
+.fundo-blog .blog:hover{
+    background-color: transparent;
+    background-image: linear-gradient(180deg, #FFFFFF 0%, #DBDBDB 100%);
+    border-style: solid;
+    border-width: 1px 1px 1px 1px;
+    border-color: #0082C4;
+    color: #0082C4;
+}
+
+.flag{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.flag .flags img{
+    width: 100%; 
+    height: auto;
+}
+
+.flag .es img{
+    width: 78%; 
+    height: auto;
 }
 
 .menu{
@@ -45,11 +122,8 @@
     background-color: transparent;
     background-image: linear-gradient(180deg, #FFFFFF 0%, #E4E4E4 100%);
     display: flex;
-}
-
-.menu .conteudo{
-    display: flex;
     align-items: center;
+    padding: 20px;
 }
 
 .menu ul{
@@ -71,12 +145,17 @@
     color: #58d0f5;
 }
 
-.banner {
+.banner{
     width: 100%;
     overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+main{
+    margin-bottom: 100px;
+    background-color: #00315E;
 }
 
 .conteudo-noticias{
@@ -86,7 +165,6 @@
 
 .noticias-competencias{
     background-image: linear-gradient(180deg, #00315E 0%, #000825 100%);
-
 }
 
 .noticias-competencias h2{
@@ -94,6 +172,7 @@
     font-weight: 900;
     font-size: 30px;
     margin-top: 80px;
+    padding: 10px 0px;
 }
 
 .card-noticias{
@@ -125,9 +204,9 @@
     width: 100%;
     color: #fff;
     font-weight: 300;
-    color: #50C4FF;;;
+    color: #50C4FF;
+    
 }
-
 
 .card-noticias .card-noticias-image img{
     width: 100%;
@@ -138,7 +217,7 @@
     transform: scale(1.3);
 }
 
-.card-noticias-text {
+.card-noticias-text{
     padding: 20px;
     font-weight: 300;
     line-height: 22px;
@@ -159,4 +238,225 @@
 .card-noticias .leia-mais .btn:hover{
     color: white;
     background-color: #0082C4;
+}
+
+.conteudo .veja-noticias .btn{
+    color: #FFF;
+    padding: 15px 0px;
+    border-radius: 15px;
+    text-decoration: none;
+    float: right;
+    margin-right: 20px;
+    font-style: italic;
+    font-size: 14;
+}
+
+.conteudo-competencias{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 18px;
+}
+
+.card-competencias{
+    flex-basis: 32.33%;
+    border-radius: 10px;
+    overflow: hidden;
+    border-style: solid;
+    border-width: 1px 1px 1px 1px;
+    border-color: #005CAAC7;
+    box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.3);
+}
+
+.card-competencias .card-competencias-image{
+    overflow: hidden;
+    position: relative;
+}
+
+.card-competencias .card-competencias-image img{
+    width: 100%;
+    transition: all 1.1s ease-out;
+}
+
+.card-competencias .card-competencias-image:hover img{
+    transform: scale(1.3);
+}
+
+.card-competencias .card-competencias-text{
+    position: absolute;
+    bottom: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    color: white;
+    font-weight: bold;
+}
+
+.oportunidades{
+    width: 1320px;
+    margin: 0 auto;
+    margin-bottom: 300px;
+}
+
+.oportunidades .conteudo-oportunidades h2{
+    color: #003C6A;
+    font-weight: 900;
+    font-size: 30px;
+    margin-top: 100px;
+    padding: 10px 0px;
+    margin-bottom: 20px;
+}
+
+.itens-oportunidades{
+    display: flex; 
+    justify-content: space-between; 
+    flex-wrap: wrap; 
+}
+
+.itens-oportunidades .card-oportunidades{
+    flex-basis: 24%; 
+    border-radius: 10px;
+    overflow: hidden;
+    border-style: solid;
+    border-width: 1px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+    height: 600px;
+}
+
+footer{
+    background-color: transparent;
+    background-image: linear-gradient(180deg, #00315E 0%, #000825 100%);
+    color: #00315E;
+    text-align: center;
+    padding: 10px 0;
+}
+
+footer .image{
+    text-align: left;
+    margin-left: 20px;
+}
+
+footer .image img{
+    width: 15%; 
+    height: auto;
+}
+
+footer .link-icons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer .link-icons .quebra{
+    flex-wrap: wrap;
+}
+
+footer .link-icons ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin-left: 20px;
+    padding: 10px;
+    margin-bottom: 20px;
+    gap: 8px;
+}
+
+footer .link-icons ul .icons-footer {
+    text-align: left;
+}
+
+.fundo-footer .icons-footer {
+    background-color: #0082C4;
+    border-radius: 50px;
+    padding: 8px;
+    color: #00315E;
+}
+
+.fundo-footer .icons-footer:hover {
+    background-color: #00315E;
+    background-image: linear-gradient(180deg, #00315E 0%, #000825 100%);
+    color: #0082C4;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #0082C4;
+}
+
+footer .links-footer{
+    display: flex;
+    text-align: right;
+    margin-bottom: 100px;
+}
+
+footer .links-footer .links-final a{
+    text-decoration: none;
+    color: white;
+}
+
+footer .links-footer .links-final a:hover{
+    color: #0082C4;
+}
+
+.retornar-topo {
+    margin-right: 20px;
+    margin-bottom: 220px;
+}
+
+.retornar-topo .topo .voltar {
+    background-color: white;
+    color: #003C6A;
+    border-radius: 50px;
+    padding: 10px;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.retornar-topo .topo .voltar:hover {
+    background-color: #00315E;
+    background-image: linear-gradient(180deg, #00315E 0%, #000825 100%);
+    color: #0082C4;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #0082C4;
+}
+
+footer .text{
+    text-align: left;
+    margin-left: 30px;
+    margin-bottom: 20px;
+    color: white;
+    font-weight: 400;
+    line-height: 1.3em;
+    font-size: 14px;
+}
+
+footer .cadastre{
+    text-align: left;
+    margin-left: 30px;
+    margin-bottom: 70px;
+}
+footer .cadastre .button{
+    background-color: transparent;
+    background-image: linear-gradient(180deg, #0082C4 0%, #003C6A 100%);
+    color: white;
+    border-radius: 50px;
+    border-style: solid;
+    border-width: 1px 1px 1px 1px;
+    border-color: #0082C4;
+    padding: 5px 15px;
+    font-family: "Ubuntu", Sans-serif;
+    font-size: 13px;
+    line-height: 1.2em;
+    font-weight: 400;
+    font-style: italic;
+}
+
+footer .cadastre .button:hover{
+    background-color: transparent;
+    background-image: linear-gradient(180deg, #00082500 0%, #00082500 100%);
+    color: #0082C4;
+}
+
+footer .direito-autorais p{
+    font-size: 12px;
+    line-height: 15px;
 }
