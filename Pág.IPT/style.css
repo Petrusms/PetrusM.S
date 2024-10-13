@@ -384,12 +384,14 @@ footer .link-icons ul .icons-footer {
 footer .links-footer{
     display: flex;
     text-align: right;
-    margin-bottom: 100px;
+    flex-direction: column;
+    margin-bottom: 120px;
 }
 
 footer .links-footer .links-final a{
     text-decoration: none;
     color: white;
+    font-size: 14px;
 }
 
 footer .links-footer .links-final a:hover{
