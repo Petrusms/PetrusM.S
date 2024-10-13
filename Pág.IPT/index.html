@@ -4,33 +4,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clone da página IPT</title>
+    <title>Clone da página IPT PMS</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <div class="site">
-        <div class="cabecalho">
+        <header>
             <div class="conteudo">
                 <img class="logo" src="images/IPT.png" alt="">
                 <div class="menus">
                     <ul>
-                        <li><a href="#"><i class="bi bi-search"></i></a></li>
-                        <li><a href="https://www.instagram.com/itaipuparquetec/" target="_blank"><i class="bi bi-instagram"></i></a></li>
-                        <li><a href="https://www.linkedin.com/company/itaipuparquetec" target="_blank"><i class="bi bi-linkedin"></i></a></li>
-                        <li><a href="https://www.facebook.com/itaipuparquetec" target="_blank"><i class="bi bi-facebook"></i></a></li>
-                        <li><a href="https://www.youtube.com/@itaipuparquetec" target="_blank"><i class="bi bi-youtube"></i></a></li>
-                        <li><a href="https://habitante.itaipuparquetec.org.br/" target="_blank">Portal do Habitante</a></li>
-                        <li><a href="https://blog.itaipuparquetec.org.br/" target="_blank">Blog</a></li>
-                        <li><a href="#"><img src="images/en-us.png" alt=""></a></li>
-                        <li><a href="#"><img src="images/pt-br.png" alt=""></a></li>
-                        <li><a href="#"><img src="images/es.png" alt=""></a></li>
+                        <li><div class="fundo-lupa"><a href="#" class="lupa"><i class="bi bi-search"></i></a></div></li>
+                        <li><div class="fundo"><a href="https://www.instagram.com/itaipuparquetec/" class="icons" target="_blank"><i class="bi bi-instagram"></i></a></div></li>
+                        <li><div class="fundo"><a href="https://www.linkedin.com/company/itaipuparquetec" class="icons" target="_blank"><i class="bi bi-linkedin"></i></a></div></li>
+                        <li><div class="fundo"><a href="https://www.facebook.com/itaipuparquetec" class="icons" target="_blank"><i class="bi bi-facebook"></i></a></div></li>
+                        <li><div class="fundo"><a href="https://www.youtube.com/@itaipuparquetec" class="icons" target="_blank"><i class="bi bi-youtube"></i></a></div></li>
+                        <li><div class="fundo"><a href="https://habitante.itaipuparquetec.org.br/" class="icons-PH" target="_blank">Portal do Habitante</a></div></li>
+                        <li><div class="fundo-blog"><a href="https://blog.itaipuparquetec.org.br/" class="blog" target="_blank">Blog</a></div></li>
+                        <div class="flag">
+                            <li><a href="#" class="flags"><img src="images/en-us.png" alt=""></a></li>
+                            <li><a href="#" class="flags"><img src="images/pt-br.png" alt=""></a></li>
+                            <li><a href="#" class="es"><img src="images/es.png" alt=""></a></li>
+                        </div>
                     </ul>
                 </div>
             </div>
-        </div>
-        <div class="menu">
-            <div class="conteudo">
+        </header>
+        <nav class="menu">
                 <ul>
                     <li><a href="#">Sobre nós</a></li>
                     <li><a href="#">Empreendedorismo e Inovação</a></li>
@@ -38,81 +39,239 @@
                     <li><a href="#">Turismo</a></li>
                     <li><a href="#">Itaipu</a></li>
                 </ul>
-            </div>
-        </div>
+        </nav>
         <div class="banner">
             <img src="images/Banner_site-scaled.jpg" alt="">
         </div>
-        <div class="noticias-competencias">
-            <div class="conteudo">
-                    <h2>NOTÍCIAS</h2>
-                <div class=" conteudo-noticias">
-                    <div class="card-noticias">
-                        <div class="card-noticias-image">
-                            <img src="images/onibus.jpg" alt="">
-                            <div class="card-noticias-data">
-                                27 de Setembro, 2024
+        <main>
+            <article class="noticias-competencias">
+                <div class="conteudo">
+                        <h2>NOTÍCIAS</h2>
+                    <div class=" conteudo-noticias">
+                        <div class="card-noticias">
+                            <div class="card-noticias-image">
+                                <img src="images/onibus.jpg" alt="">
+                                <div class="card-noticias-data">
+                                    27 de Setembro, 2024
+                                </div>
+                            </div>
+                            <div class="card-noticias-text">
+                                <p>Itaipu Parquetec celebra Dia Mundial do Turismo com palestra sobre inovação na ABAV Expo e marca 1º ano de sua Diretoria de Turismo</p>
+                            </div>
+                            <div class="leia-mais">
+                                <a class="btn" href="#">Leia mais »</a>
                             </div>
                         </div>
-                        <div class="card-noticias-text">
-                            <p>Itaipu Parquetec celebra Dia Mundial do Turismo com palestra sobre inovação na ABAV Expo e marca 1º ano de sua Diretoria de Turismo</p>
+                        <div class="card-noticias">
+                            <div class="card-noticias-image">
+                                <img src="images/onibus2.jpeg" alt="">
+                                <div class="card-noticias-data">
+                                    24 de Setembro, 2024
+                                </div>
+                            </div>
+                            <div class="card-noticias-text">
+                                <p>Itaipu Parquetec e prefeitura de Foz implementam duas linhas de transporte público ao Itaipu Parquetec</p>
+                            </div>
+                            <div class="leia-mais">
+                                <a class="btn" href="#">Leia mais »</a>
+                            </div>
                         </div>
-                        <div class="leia-mais">
-                            <a class="btn" href="#">Leia mais »</a>
+                        <div class="card-noticias">
+                            <div class="card-noticias-image">
+                                <img src="images/encontro.jpeg" alt="">
+                                <div class="card-noticias-data">
+                                    23 de Setembro, 2024
+                                </div>
+                            </div>
+                            <div class="card-noticias-text">
+                                <p>Itaipu Binacional e Itaipu Parquetec concluem sete encontros dos Núcleos de Cooperação Socioambiental</p>
+                            </div>
+                            <div class="leia-mais">
+                                <a class="btn" href="#">Leia mais »</a>
+                            </div>
+                        </div>
+                        <div class="card-noticias">
+                            <div class="card-noticias-image">
+                                <img src="images/encontro2.jpeg" alt="">
+                                <div class="card-noticias-data">
+                                    18 de Setembro, 2024
+                                </div>
+                            </div>
+                            <div class="card-noticias-text">
+                                <p>Instituições se unem em rede socioambiental organizada por Itaipu e Itaipu Parquetec</p>
+                            </div>
+                            <div class="leia-mais">
+                                <a class="btn" href="#">Leia mais »</a>
+                            </div>
                         </div>
                     </div>
-                    <div class="card-noticias">
-                        <div class="card-noticias-image">
-                            <img src="images/onibus2.jpeg" alt="">
-                            <div class="card-noticias-data">
-                                24 de Setembro, 2024
+                    <div class="Veja-noticias">
+                        <a class="btn" href="https://www.itaipuparquetec.org.br/noticias/">Veja todas as notícias »</a>
+                    </div> 
+                        <h2>COMPETÊNCIAS</h2>
+                    <div class=" conteudo-competencias">
+                        <div class="card-competencias">
+                            <div class="card-competencias-image">
+                                <a href="https://www.itaipuparquetec.org.br/automacao-simulacao-sistemas-eletricos/"><img src="images/3_Competências_Banners_01.png" alt=""></a>    
+                                <div class="card-competencias-text">
+                                    <div class="p1">AUTOMAÇÃO E SIMULAÇÃO</div>
+                                    <div class="p2">DE SISTEMAS ELÉTRICOS</div>
+                                </div>
                             </div>
                         </div>
-                        <div class="card-noticias-text">
-                            <p>Itaipu Parquetec e prefeitura de Foz implementam duas linhas de transporte público ao Itaipu Parquetec</p>
-                        </div>
-                        <div class="leia-mais">
-                            <a class="btn" href="#">Leia mais »</a>
-                        </div>
-                    </div>
-                    <div class="card-noticias">
-                        <div class="card-noticias-image">
-                            <img src="images/encontro.jpeg" alt="">
-                            <div class="card-noticias-data">
-                                23 de Setembro, 2024
+                        <div class="card-competencias">
+                            <div class="card-competencias-image">
+                                <a href="https://www.itaipuparquetec.org.br/energias-renovaveis/"><img src="images/3_Competências_Banners-02.png" alt=""></a>
+                                <div class="card-competencias-text">
+                                    <div class="p1">ENERGIAS</div>
+                                    <div class="p2">RENOVÁVEIS</div>
+                                </div>
                             </div>
                         </div>
-                        <div class="card-noticias-text">
-                            <p>Itaipu Binacional e Itaipu Parquetec concluem sete encontros dos Núcleos de Cooperação Socioambiental</p>
-                        </div>
-                        <div class="leia-mais">
-                            <a class="btn" href="#">Leia mais »</a>
-                        </div>
-                    </div>
-                    <div class="card-noticias">
-                        <div class="card-noticias-image">
-                            <img src="images/encontro2.jpeg" alt="">
-                            <div class="card-noticias-data">
-                                18 de Setembro, 2024
+                        <div class="card-competencias">
+                            <div class="card-competencias-image">
+                                <a href="https://www.itaipuparquetec.org.br/inteligencia-e-gestao-territorial/"><img src="images/3_Competências_Banners-03.png" alt=""></a>
+                                <div class="card-competencias-text">
+                                    <div class="p1">INTELIGÊNCIA</div>
+                                    <div class="p2">E GESTÃO TERRITORIAL</div>
+                                </div>
                             </div>
                         </div>
-                        <div class="card-noticias-text">
-                            <p>Instituições se unem em rede socioambiental organizada por Itaipu e Itaipu Parquetec</p>
+                        <div class="card-competencias">
+                            <div class="card-competencias-image">
+                                <a href="https://www.itaipuparquetec.org.br/tecnologias-aplicadas/"><img src="images/3_Competências_Banners-04.png" alt=""></a>
+                                <div class="card-competencias-text">
+                                    <div class="p1">TECNOLOGIAS</div>
+                                    <div class="p2">APLICADAS</div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="leia-mais">
-                            <a class="btn" href="#">Leia mais »</a>
+                        <div class="card-competencias">
+                            <div class="card-competencias-image">
+                                <a href="https://www.itaipuparquetec.org.br/estruturas-de-barragens/"><img src="images/3_Competências_Banners-05.png" alt=""></a>
+                                <div class="card-competencias-text">
+                                    <div class="p1">ESTRUTURAS</div>
+                                    <div class="p2">DE BARRAGENS</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-competencias">
+                            <div class="card-competencias-image">
+                                <a href="https://www.itaipuparquetec.org.br/seguranca-cibernetica/"><img src="images/3_Competências_Banners-06.png" alt=""></a>
+                                <div class="card-competencias-text">
+                                    <div class="p1">SEGURANÇA</div>
+                                    <div class="p2">CIBERNÉTICA</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-competencias">
+                            <div class="card-competencias-image">
+                                <a href="https://www.itaipuparquetec.org.br/arquitetura-e-engenharia/"><img src="images/3_Competências_Banners-07.png" alt=""></a>
+                                <div class="card-competencias-text">
+                                    <div class="p1">ARQUITETURA</div>
+                                    <div class="p2">E ENGENHARIA</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-competencias">
+                            <div class="card-competencias-image">
+                                <a href="https://www.itaipuparquetec.org.br/ciencia-e-educacao/"><img src="images/3_Competências_Banners-08.png" alt=""></a>
+                                <div class="card-competencias-text">
+                                    <div class="p1">CIÊNCIA</div>
+                                    <div class="p2">E EDUCAÇÃO</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-competencias">
+                            <div class="card-competencias-image">
+                                <a href="https://www.itaipuparquetec.org.br/turismo-sustentavel/"><img src="images/3_Competências_Banners-09.png" alt=""></a>
+                                <div class="card-competencias-text">
+                                    <div class="p1">TURISMO</div>
+                                    <div class="p2">SUSTENTÁVEL</div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                    <h2>COMPETÊNCIAS</h2>
-                <div class=" conteudo-competencias">
-
+            </article>
+        </main>
+    </div>
+    <section class="oportunidades">
+        <div class="conteudo-oportunidades">
+            <h2>Oportunidades</h2>
+            <div class="itens-oportunidades">
+                <div class="card-oportunidades">
+                    <div class="card-oportunidade-image">
+                        <img src="" alt="">
+                    </div>
+                </div>
+                <div class="card-oportunidades">
+                    <div class="card-oportunidade-image">
+                        <img src="" alt="">
+                    </div>
+                </div>
+                <div class="card-oportunidades">
+                    <div class="card-oportunidade-image">
+                        <img src="" alt="">
+                    </div>
+                </div>
+                <div class="card-oportunidades">
+                    <div class="card-oportunidade-image">
+                        <img src="" alt="">
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="rodape">
-            
-        </div>
-    </div>
+    </section>
+    <footer>
+        <div class="image"><img src="images/itaipuparquetec_preferencial_branco-1024x576.png" alt=""></div>
+        <div class="conteudo-footer">
+            <div class="link-icons">
+                <div class="quebra">
+                    <ul>
+                        <li><div class="fundo-footer"><a href="https://www.instagram.com/itaipuparquetec/" class="icons-footer" target="_blank"><i class="bi bi-instagram"></i></a></div></li>
+                        <li><div class="fundo-footer"><a href="https://www.linkedin.com/company/itaipuparquetec" class="icons-footer" target="_blank"><i class="bi bi-linkedin"></i></a></div></li>
+                        <li><div class="fundo-footer"><a href="https://www.facebook.com/itaipuparquetec" class="icons-footer" target="_blank"><i class="bi bi-facebook"></i></a></div></li>
+                        <li><div class="fundo-footer"><a href="https://x.com/ptibrasil" class="icons-footer" target="_blank"><i class="bi bi-twitter"></i></a></div></li>
+                        <li><div class="fundo-footer"><a href="https://www.youtube.com/@itaipuparquetec" class="icons-footer" target="_blank"><i class="bi bi-youtube"></i></a></div></li>
+                    </ul>
+                    <div class="text">
+                        <strong>ITAIPU PARQUETEC</strong>
+                        <p>Avenida Tancredo Neves, 6731</p>
+                        <p>CEP: 85867-900 • Foz do Iguaçu, Paraná/Brasil</p>
+                        <p>Contato: (45) 3576 7200 •</p>
+                        <p>comunicacao@itaipuparquetec.org.br</p>
+                    </div>
+                    <div class="cadastre"><button class="button">Cadastre-se aqui para receber a nossa newsletter</button></div>
+                </div>
+                <div class="links-footer">
+                    <div class="links-final">
+                        <a href="" >Comunicação Institucional</a>
+                        <br>
+                        <a href="" >Biblioteca Paulo Freire</a>
+                        <br>
+                        <a href="" >Responsabilidade Social</a>
+                        <br>
+                        <a href="" >Transparência</a>
+                        <br>
+                        <a href="" >Canal de Ética</a>
+                        <br>
+                        <a href="" >Lei Geral de Proteção de Dados (LGPD) e Solicitação de Direito do Titular</a>
+                        <br>
+                        <a href="" >Termos e Condições Gerais de Uso do Site</a>
+                        <br>
+                        <a href="" >Política de Privacidade do Site</a>
+                        <br>
+                        <a href="" >Política de Cookies</a>
+                    </div>
+                </div>
+                <div class="retornar-topo">
+                    <div class="topo">
+                        <a class="voltar" href="#">Voltar ao topo<i class="bi bi-arrow-up-short"></i></a>
+                    </div>
+                </div>
+            </div> 
+        <div class="direitos-autorais"><p>2021 &copy; Todos os direitos reservados - Implementado por EVAH.</p></div>
+    </footer>
 </body>
 </html>
