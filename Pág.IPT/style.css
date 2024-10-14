@@ -298,7 +298,7 @@ main{
     margin-bottom: 300px;
 }
 
-.oportunidades .conteudo-oportunidades h2{
+.oportunidades .conteudo-oportunidades .titulo{
     color: #003C6A;
     font-weight: 900;
     font-size: 30px;
@@ -323,6 +323,98 @@ main{
     height: 600px;
 }
 
+.itens-oportunidades .card-oportunidades h1{
+    text-align: center;
+    color: white;
+    margin-top: 40px;
+    margin-bottom: 25px;
+}
+
+#yellow{
+    background-image: url('images/Oportunidades_Cursos_Banners_01.png');
+    background-size: cover;
+    background-position: center;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #FFFC77;
+}
+
+#amarelo{
+    background-color: #FCA51A;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #FFFC77;
+}
+
+#verde{
+    background-image: url('images/Oportunidades_Editais_Banners_01.png');
+    background-size: cover;
+    background-position: center;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #E9FF77;
+}
+
+#green{
+    background-color: #B8CB33;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #E9FF77;
+}
+
+#cyan{
+    background-image: url('images/Oportunidades_Ecossistema_Banners-01.png');
+    background-size: cover;
+    background-position: center; 
+    border-style: solid;
+    border-width: 1px;
+    border-color: #00F9FF;
+}
+
+#ciano{
+    background-color: #00ABAF;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #00F9FF;
+}
+
+#vermelho{
+    background-image: url('images/Oportunidades_Facaparte_Banners-01.png');
+    background-size: cover;
+    background-position: center; 
+    border-style: solid;
+    border-width: 1px;
+    border-color: #FF687D;
+}
+
+#red{
+    background-color: #E12843;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #FF687D;
+}
+.itens-oportunidades .card-oportunidades .card-oportunidade-conteudo{
+    border-radius: 50px;
+    margin-bottom: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+    box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.3);
+}
+
+.image img{
+    width: 20%; 
+    height: auto;
+}
+
+.card-oportunidade-conteudo .image{
+    display: flex; 
+    align-items: center;    
+    color: white;
+}
+
+.card-oportunidade-conteudo .image .space{
+    margin-left: 20px;
+}
 footer{
     background-color: transparent;
     background-image: linear-gradient(180deg, #00315E 0%, #000825 100%);
