@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hourglass Shape</title>
+    <style>
+        .container {
+            display: flex; /* Usar flexbox para alinhar os triângulos lado a lado */
+            align-items: center; /* Centraliza os triângulos verticalmente */
+            justify-content: center; /* Centraliza os triângulos horizontalmente */
+            height: 100vh; /* Altura total da tela */
+        }
+
+        /* Triângulo apontando para a direita (►) */
+        .triangulo-right {
+            width: 0;
+            height: 0;
+            border-left: 100px solid red; /* A cor do triângulo */
+            border-top: 30px solid transparent;
+            border-bottom: 30px solid transparent;
+        }
+
+        /* Triângulo apontando para a esquerda (◄) */
+        .triangulo-left {
+            width: 0;
+            height: 0;
+            border-right: 100px solid red; /* A cor do triângulo */
+            border-top: 30px solid transparent;
+            border-bottom: 30px solid transparent;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="triangulo-right"></div>   <!-- Triângulo apontando para a esquerda -->
+        <div class="triangulo-left"></div>   <!-- Triângulo apontando para a direita -->
+    </div>
+</body>
+</html>
