@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tri-Ponte</title>
+    <style>
+        body {
+            margin: 0; /* Remove margens padrão */
+        }
+
+        #triangulos {
+            display: flex; /* Usar flexbox para alinhar os triângulos lado a lado */
+            align-items: center; /* Centraliza os triângulos verticalmente */
+        }
+
+        /* Triângulo preto apontando para a direita (►) */
+        #triangulo-right-maior {
+            width: 0;
+            height: 0;
+            border-left: 684.5px solid rgba(221, 221, 221, 1); /* Cor preta com 50% de opacidade */
+            border-top: 0px solid transparent;
+            border-bottom: 50px solid transparent;
+            position: relative; /* Para posicionar os triângulos internos */
+        }
+
+        #triangulo-right-medio {
+            width: 0;
+            height: 0;
+            border-left: 684.5px solid rgba(170, 170, 170, 0.6); /* Cor cinza médio com 50% de opacidade */
+            border-top: 0px solid transparent;
+            border-bottom: 30px solid transparent;
+            position: absolute; /* Posiciona dentro do triângulo maior */
+            right: 0; /* Alinha à esquerda do triângulo maior */
+        }
+
+        #triangulo-right-menor {
+            width: 0;
+            height: 0;
+            border-left: 684.5px solid rgba(0, 8, 37, 0.7); /* Cor cinza escuro com 50% de opacidade */
+            border-top: 0px solid transparent;
+            border-bottom: 15px solid transparent;
+            position: absolute; /* Posiciona dentro do triângulo médio */
+            right: 0; /* Alinha à esquerda do triângulo médio */
+        }
+
+        /* Triângulo vermelho apontando para a esquerda (◄) */
+        #triangulo-left-maior {
+            width: 0;
+            height: 0;
+            border-right: 684.5px solid rgba(221, 221, 221, 1);
+            border-top: 0px solid transparent;
+            border-bottom: 50px solid transparent;
+            position: relative; /* Para posicionar os triângulos internos */
+        }
+
+        #triangulo-left-medio {
+            width: 0;
+            height: 0;
+            border-right: 684.5px solid rgba(170, 170, 170, 0.6); /* Cor média com 50% de opacidade */
+            border-top: 0px solid transparent;
+            border-bottom: 30px solid transparent;
+            position: absolute; /* Posiciona dentro do triângulo maior */
+            left: 0; /* Alinha à esquerda do triângulo maior */
+        }
+
+        #triangulo-left-menor {
+            width: 0;
+            height: 0;
+            border-right: 684.5px solid rgba(0, 8, 37, 0.7); /* Cor escura com 50% de opacidade */
+            border-top: 0px solid transparent;
+            border-bottom: 15px solid transparent;
+            position: absolute; /* Posiciona dentro do triângulo médio */
+            left: 0; /* Alinha à esquerda do triângulo médio */
+        }
+    </style>
+</head>
+<body>
+    <div id="triangulos">
+        <div id="triangulo-right-maior">
+            <div id="triangulo-right-medio"></div>
+            <div id="triangulo-right-menor"></div>
+        </div> 
+        <div id="triangulo-left-maior">
+                <div id="triangulo-left-medio"></div>
+                <div id="triangulo-left-menor"></div>
+        </div>
+    </div> 
+</body>
+</html>
