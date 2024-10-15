@@ -1,1 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tri-Ponte</title>
+    <style>
+        body {
+            margin: 0; 
+            display: flex; 
+            align-items: center; 
+        }
 
+        /* Triângulo preto apontando para a direita (►) */
+        .triangulo-right {
+            width: 0;
+            height: 0;
+            border-left: 684.5px solid black;
+            border-top: 0px solid transparent;
+            border-bottom: 30px solid transparent;
+            margin-right: -1px; 
+        }
+
+        /* Triângulo vermelho apontando para a esquerda (◄) */
+        .triangulo-left {
+            width: 0;
+            height: 0;
+            border-right: 684.5px solid red;
+            border-top: 0px solid transparent;
+            border-bottom: 30px solid transparent;
+            margin-left: -1px; 
+        }
+    </style>
+</head>
+<body>
+    <div class="triangulo-right"></div> 
+    <div class="triangulo-left"></div> 
+</body>
+</html>
