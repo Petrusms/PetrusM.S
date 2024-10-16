@@ -295,7 +295,7 @@ main{
 .oportunidades{
     width: 1320px;
     margin: 0 auto;
-    margin-bottom: 300px;
+    margin-bottom: 250px;
 }
 
 .oportunidades .conteudo-oportunidades .titulo{
@@ -698,4 +698,72 @@ footer .direito-autorais p{
     border-bottom: 15px solid transparent;
     position: absolute; 
     left: 0; 
+}
+
+#triangulos-invertidos {
+    display: flex; 
+    align-items: flex-end; 
+}
+
+/* Triângulo apontando para a direita (►) */
+#triangulo-right-maior-inver {
+    width: 0;
+    height: 0;
+    border-left: 682.7px solid rgba(111, 135, 158, 0.4); 
+    border-top: 50px solid transparent;
+    border-bottom: 0px solid transparent;
+    position: relative;
+}
+
+#triangulo-right-medio-inver {
+    width: 0;
+    height: 0;
+    border-left: 682.7px solid rgba(102, 122, 140, 0.6); 
+    border-top: 30px solid transparent;
+    border-bottom: 0px solid transparent;
+    position: absolute; 
+    bottom: 0px; 
+    right: 0;
+}
+
+#triangulo-right-menor-inver {
+    width: 0;
+    height: 0;
+    border-left: 682.7px solid rgba(0, 20, 54, 0.4); 
+    border-top: 15px solid transparent;
+    border-bottom: 0px solid transparent;
+    position: absolute; 
+    bottom: 0px; 
+    right: 0;
+}
+
+/* Triângulo apontando para a esquerda (◄) */
+#triangulo-left-maior-inver {
+    width: 0;
+    height: 0;
+    border-right: 682.7px solid rgba(111, 135, 158, 0.4); 
+    border-top: 50px solid transparent;
+    border-bottom: 0px solid transparent;
+    position: relative;
+    top: 0px;
+}
+
+#triangulo-left-medio-inver {
+    width: 0;
+    height: 0;
+    border-right: 682.7px solid rgba(102, 122, 140, 0.6); 
+    border-top: 30px solid transparent;
+    border-bottom: 0px solid transparent;
+    position: absolute; 
+    bottom: 0px; 
+}
+
+#triangulo-left-menor-inver {
+    width: 0;
+    height: 0;
+    border-right: 682.7px solid rgba(0, 20, 54, 0.4); 
+    border-top: 15px solid transparent;
+    border-bottom: 0px solid transparent;
+    position: absolute; 
+    bottom: 0px; 
 }
