@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hourglass Shape</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh; 
+            display: flex;
+            justify-content: center;
+            align-items: flex-end; /* Alinha os triângulos ao fundo */
+        }
+        
+        #triangulos-invertidos {
+            display: flex; 
+            align-items: flex-end; /* Alinha os triângulos ao fundo */
+        }
+
+        /* Triângulo apontando para a direita (►) */
+        #triangulo-right-maior-inver {
+            width: 0;
+            height: 0;
+            border-left: 682.7px solid rgba(111, 135, 158, 0.4); 
+            border-top: 50px solid transparent;
+            border-bottom: 0px solid transparent;
+            position: relative;
+        }
+
+        #triangulo-right-medio-inver {
+            width: 0;
+            height: 0;
+            border-left: 682.7px solid rgba(102, 122, 140, 0.6); 
+            border-top: 30px solid transparent;
+            border-bottom: 0px solid transparent;
+            position: absolute; /* Mantém em relação ao pai */
+            bottom: 0px; /* Ajusta a posição vertical para sobrepor corretamente */
+            right: 0;
+        }
+
+        #triangulo-right-menor-inver {
+            width: 0;
+            height: 0;
+            border-left: 682.7px solid rgba(0, 20, 54, 0.7); 
+            border-top: 15px solid transparent;
+            border-bottom: 0px solid transparent;
+            position: absolute; /* Mantém em relação ao pai */
+            bottom: 0px; /* Ajusta a posição vertical para sobrepor corretamente */
+            right: 0;
+        }
+
+        /* Triângulo apontando para a esquerda (◄) */
+        #triangulo-left-maior-inver {
+            width: 0;
+            height: 0;
+            border-right: 682.7px solid rgba(111, 135, 158, 0.4); 
+            border-top: 50px solid transparent;
+            border-bottom: 0px solid transparent;
+            position: relative;
+            top: 0px;
+        }
+
+        #triangulo-left-medio-inver {
+            width: 0;
+            height: 0;
+            border-right: 682.7px solid rgba(102, 122, 140, 0.6); 
+            border-top: 30px solid transparent;
+            border-bottom: 0px solid transparent;
+            position: absolute; /* Mantém em relação ao pai */
+            bottom: 0px; /* Ajusta a posição vertical para sobrepor corretamente */
+        }
+
+        #triangulo-left-menor-inver {
+            width: 0;
+            height: 0;
+            border-right: 682.7px solid rgba(0, 20, 54, 0.7); 
+            border-top: 15px solid transparent;
+            border-bottom: 0px solid transparent;
+            position: absolute; /* Mantém em relação ao pai */
+            bottom: 0px; /* Ajusta a posição vertical para sobrepor corretamente */
+        }
+    </style>
+</head>
+<body>
+    <div id="triangulos-invertidos">
+        <div id="triangulo-right-maior-inver">
+            <div id="triangulo-right-medio-inver"></div>
+            <div id="triangulo-right-menor-inver"></div>
+        </div> 
+        <div id="triangulo-left-maior-inver">
+                <div id="triangulo-left-medio-inver"></div>
+                <div id="triangulo-left-menor-inver"></div>
+        </div>  
+    </div>
+</body>
+</html>
