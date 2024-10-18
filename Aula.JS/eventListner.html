@@ -23,22 +23,45 @@
     <div class="button">
         <button>Click here</button>
         <p></p>
+
+        <input type="text">
+        <p></p>
     </div>
 
     <script>
         let numClicks = 0;
         const button = document.querySelector('button');
-        const text = document.querySelector('p');
+        const texts = document.querySelectorAll('p');
+
+        const input = document.querySelector('input');
 
         //função anônima
-        button.onclick = function () {
-            numClicks++;
-            text.innerText = "O botão foi clicado: " + numClicks + " vezes.";
-        }
+        //button.onclick = function () {
+            //numClicks++;
+            //text.innerText = "O botão foi clicado: " + numClicks + " vezes.";
+        //}
 
         button.addEventListener('click',  () =>{
             numClicks++;
-            text.innerText = "O botão foi clicado: " + numClicks + " vezes.";
+            texts[0].innerText = "O botão foi clicado: " + numClicks + " vezes.";
+        });
+
+        input.addEventListener('keyup', () =>{
+            let textDigitado = input.value;
+            texts[1].innerText = input.value;
+
+            if(textDigitado == "Calabresa"){
+                texts[1].innerText = "Um sabor clássico.";
+            } else if(textDigitado == "Baunilha"){
+                texts[1].innerText = "Eu amo sorvete de baunilha.";
+            } else{
+                texts[1].innerText = "Seu gosto é peculiar!";
+            }
+        });
+
+        document.addEventListener("click", () =>{
+            let bgColor = 'rgb(' + Math.random() * 255 + ',' + Math.random() * 255 + ',' + Math.random() * 255 + ')';
+            document.body.style.backgroundColor = bgColor;
         });
     </script>
 </body>
