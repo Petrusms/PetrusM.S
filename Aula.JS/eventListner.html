@@ -26,13 +26,15 @@
 
         <input type="text">
         <p></p>
+
+        <button class="contagem">Iniciar contagem regressiva</button>
+        <h1>10</h1>
     </div>
 
     <script>
         let numClicks = 0;
-        const button = document.querySelector('button');
+        const button = document.querySelectorAll('button');
         const texts = document.querySelectorAll('p');
-
         const input = document.querySelector('input');
 
         //função anônima
@@ -41,7 +43,7 @@
             //text.innerText = "O botão foi clicado: " + numClicks + " vezes.";
         //}
 
-        button.addEventListener('click',  () =>{
+        button[0].addEventListener('click',  () =>{
             numClicks++;
             texts[0].innerText = "O botão foi clicado: " + numClicks + " vezes.";
         });
@@ -59,10 +61,23 @@
             }
         });
 
-        document.addEventListener("click", () =>{
+        document.addEventListener('click', () =>{
             let bgColor = 'rgb(' + Math.random() * 255 + ',' + Math.random() * 255 + ',' + Math.random() * 255 + ')';
             document.body.style.backgroundColor = bgColor;
         });
+
+        button[1].addEventListener('click', () =>{
+            const h = document.querySelector('h1');
+            let contador = 10;
+            setInterval(() =>{
+                if(contador>0){
+                    contador--;
+                    h.innerText = contador;
+                }else if(contador == 0){
+                    h.innerText = "Tempo acabou";
+                }   
+            }, 1000)
+        })
     </script>
 </body>
 </html>
