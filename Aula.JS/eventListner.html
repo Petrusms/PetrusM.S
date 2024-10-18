@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EventListener</title>
+
+    <style>
+        body {
+            display: flex;
+            justify-content: center; 
+            align-items: center; 
+            height: 100vh; 
+            margin: 0; 
+        }
+
+        .button {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="button">
+        <button>Click here</button>
+        <p></p>
+    </div>
+
+    <script>
+        let numClicks = 0;
+        const button = document.querySelector('button');
+        const text = document.querySelector('p');
+
+        //função anônima
+        button.onclick = function () {
+            numClicks++;
+            text.innerText = "O botão foi clicado: " + numClicks + " vezes.";
+        }
+
+        button.addEventListener('click',  () =>{
+            numClicks++;
+            text.innerText = "O botão foi clicado: " + numClicks + " vezes.";
+        });
+    </script>
+</body>
+</html>
