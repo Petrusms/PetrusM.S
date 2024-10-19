@@ -69,11 +69,13 @@
         button[1].addEventListener('click', () =>{
             const h = document.querySelector('h1');
             let contador = 10;
-            setInterval(() =>{
+
+            interval = setInterval(() =>{
                 if(contador>0){
                     contador--;
                     h.innerText = contador;
                 }else if(contador == 0){
+                    clearInterval(interval);
                     h.innerText = "Tempo acabou";
                 }   
             }, 1000)
