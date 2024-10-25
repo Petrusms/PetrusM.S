@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 4</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center; 
+            align-items: center; 
+            height: 100vh; 
+            margin: 0; 
+        }
+
+        .button {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <button><p>contador</p></button>
+
+    <script>
+        const botao = document.querySelector('button');
+        const text = document.querySelector('p');
+        let contador = 0;
+
+        botao.addEventListener('click',  () =>{
+            contador++;
+            text.innerText = "O botão foi clicado: " + contador + " vezes.";
+        });
+    </script>
+
+</body>
+</html>

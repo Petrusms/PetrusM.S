@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 5</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center; 
+            align-items: center; 
+            flex-direction: column;
+            height: 100vh; 
+            margin: 0; 
+        }
+
+        .button {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <button>ADICIONAR</button>
+    <li>0</li>
+
+    <script>
+        let botao = document.querySelector('button');
+        let lista = document.querySelector('li');
+        let numLista = 1
+
+        botao.addEventListener('click',  () =>{
+            const NovoItem = document.createElement('li') 
+            NovoItem.textContent = numLista++
+            lista.appendChild(NovoItem)
+        });
+    </script>
+</body>
+</html>

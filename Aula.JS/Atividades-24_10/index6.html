@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 6</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center; 
+            align-items: center;
+            flex-direction: column; 
+            height: 100vh; 
+            margin: 0; 
+        }
+
+        .botoes {
+            display: flex;
+            flex-wrap: nowrap;
+        }
+
+        .p {
+            border: 1px solid black;
+        }
+
+        button {
+            background-color: blue;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>Gerador de nomes de Aventura</h1>
+    <div class="botoes">
+        <button>gerar nome</button>
+        <div class="p"><p>???</p></div>
+    </div>
+
+    <script>
+        const titles = ["Sr.", "Mister", "Dom", "Lord", "Lady", "Capitão", "Dama", "Rei", "Gentleman"];
+        const names = ["Arthur", "Gwendolyn", "Merlin", "Lancelot", "Morgana", "Ragnar", "Éowyn", "Escanor"];
+        const classes = ["Mago", "Paladino", "Arqueiro", "Ladino", "Bárbaro", "Feiticeiro", "Cavaleiro", "Ladrão"];
+        const locations = ["Valfenda", "Gondor", "Asgard", "Camelot", "Nárnia", "Babilônia", "Atlantis", "Liones", ];
+        const button = document.querySelector('button');
+        const p = document.querySelector('p');
+        
+        button.addEventListener('click',  () =>{
+            p.innerText = titles[Math.floor(Math.random() * 9)] +" "+ names[Math.floor(Math.random() * 8)] +", o " + classes[Math.floor(Math.random() * 8)] +" de " + locations[Math.floor(Math.random() * 8)];
+        });
+    </script>
+</body>
+</html>
