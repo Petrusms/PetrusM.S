@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Claro/Escuro Local Storage</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center; 
+            align-items: center; 
+            height: 100vh; 
+            margin: 0; 
+        }
+
+        .button {
+            text-align: center;
+        }
+
+        .tema-escuro{
+            background-color: black;
+        }
+        .tema-claro{
+            background-color: white;
+        }
+    </style>
+</head>
+<body>
+    <button>Modo Claro/Escuro</button>
+
+    <script>
+        const modo = document.querySelector("button")
+
+        modo.addEventListener('click', () =>{
+            if(document.body.classList.contains('tema-escuro')){
+                document.body.classList.add('tema-claro');
+                document.body.classList.remove('tema-escuro');
+                localStorage.setItem('tema', 'tema-claro')
+            }else{
+                document.body.classList.add('tema-escuro');
+                document.body.classList.remove('tema-claro');
+                localStorage.setItem('tema', 'tema-escuro')
+            }
+        });
+
+        document.addEventListener('DOMContenLoader', ()=>{
+            const tema = localStorage.getItem('tema')
+            document.body.classList.add(tema);
+        })
+    </script>
+</body>
+</html>
