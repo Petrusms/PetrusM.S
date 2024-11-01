@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Claro/Escuro Local Storage</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center; 
+            align-items: center; 
+            flex-direction: column;
+            height: 100vh; 
+            margin: 0; 
+        }
+
+        .button {
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    <div>
+        <input type="text">
+        <button>Adicionar</button>
+    </div>
+    <h2>Lista</h2>
+    <ul></ul>
+
+    <script>
+        let input = document.querySelector('input');
+        let botao = document.querySelector('button');
+        let lista = document.querySelector('ul');
+
+        botao.addEventListener('click',  () =>{
+            if(input.value != ""){
+                addToList(input.value)
+                saveLocalStorage(input.value)
+            }
+            input.value = ''
+        });
+
+        function addToList(tarefa){
+            const NovoItem = document.createElement('li') 
+            const excluir = document.createElement('button') 
+            NovoItem.textContent = input.value
+            excluir.textContent = "Excluir"
+            lista.appendChild(NovoItem)
+            NovoItem.appendChild(excluir)
+
+            excluir.addEventListener('click', ()=>{
+                NovoItem.remove()
+            })
+        }
+
+        function saveLocalStorage(tarefa){
+            const tarefas = obterAllTarefas()
+            tarefas.push(tarefa)
+            localStorage.setItem('tarefas', JSON.stringify(tarefas))
+        }
+
+        function obterAllTarefas(){
+            const tarefas = localStorage.getItem('tarefas')
+            return tarefas ? JSON.parse(tarefas) : []
+        }
+
+    </script>
+</body>
+</html>
