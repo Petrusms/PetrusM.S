@@ -56,7 +56,6 @@
         <div class="grupo">
             <input type="password" placeholder="informe sua senha">
             <a class="ocultado"><i class="bi bi-eye-slash"></i></a>
-            <a class="mostrando"></a><i class="bi bi-eye"></i>
             <span class="erro">a senha precisa ter 8 caracteres </span>
         </div>
 
@@ -134,7 +133,11 @@
         document.querySelector('.ocultado').addEventListener('click', ()=>{
             const tipoAtual = inputs[2].getAttribute('type');
             const tipo = tipoAtual === 'password' ? 'text' : 'password';
-            const icon = document.querySelector('.ocultado');
+            if (tipoAtual === 'password'){
+                    document.querySelector('.ocultado').innerHTML = '<i class="bi bi-eye"></i>'; 
+                }else{
+                    document.querySelector('.ocultado').innerHTML = '<i class="bi bi-eye-slash"></i>'; 
+                }
 
             inputs[2].setAttribute('type', tipo);
         })
