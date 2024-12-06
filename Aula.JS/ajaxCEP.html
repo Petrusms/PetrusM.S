@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajax</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center; 
+            align-items: center; 
+            height: 100vh; 
+            margin: 0; 
+        }
+
+        .button {
+            text-align: center;
+        }
+
+        .carregando {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <input type="text">
+    <button>Buscar</button>
+    <section class="resultado"></section>
+
+    <div class="carregando">
+        carregando...
+    </div>
+
+    <script>
+
+        function buscar(cep){
+            let ajax = new XMLHttpRequest()
+
+            ajax.open('GET', `https://viacep.com.br/ws/${cep}/json/`, true)
+            ajax.onload = function(){
+                if(ajax.status == 200){
+                    loading.style.display = "none"
+                    console.log('Resposta:', JSON.parse(ajax.responseText))
+
+                    let endereco = JSON.parse(ajax.responseText)//Para pegar algo especifico
+
+                    let resultado = document.querySelector('.resultado')
+                    resultado.innerHTML =  "Logradouro: "+ endereco.logradouro +"<br> Bairro: "+ endereco.bairro +"<br> Localidade: "+ endereco.localidade
+                } else {
+                    console.error('Erro:', ajax.status, ajax.statusText)
+                }
+            }
+            
+            ajax.send(null)
+        }
+
+        let loading = document.querySelector('.carregando')
+
+        let input = document.querySelector('input')
+        let button = document.querySelector('button')
+
+        button.addEventListener('click', ()=>{
+            loading.style.display = "block"
+            let cep = input.value
+            buscar(cep)
+        })
+    </script>
+</body>
+</html>
