@@ -64,6 +64,12 @@
         carrinho = JSON.parse(carrinho);
         console.log(carrinho)
 
+        elementosCarrinho = carrinho.length
+
+        for (let i = 0; i < elementosCarrinho; i++) {
+            criarItemCarrinho()
+        }
+
         function criarItemCarrinho(){
             let itemCarrinho = document.createElement('div')
             itemCarrinho.classList.add = 'item-carrinho'
@@ -86,6 +92,9 @@
 
             item.appendChild(itemInfo)
             itemCarrinho.appendChild(item)
+
+            let carrinho = document.querySelector('.carrinho')
+            carrinho.appendChild(ItemCarrinho)
         }
 
     </script>
