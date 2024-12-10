@@ -14,88 +14,117 @@
         <div class="carrinho-badge">
             <a href="#">
                 <i class="bi bi-cart icone-carrinho"></i>
-                <span class="contador">3</span>
+                <span class="contador">0</span>
             </a>
         </div>
     </header>
 
     <main class="carrinho">
 
-        <!-- item 1 -->
-        <div class="item-carrinho">
-            <div class="item">
-                <img src="https://picsum.photos/300/500" alt="Imagem do Produto" class="item-img">
-                <div class="item-info">
-                    <h2>Nome do Produto</h2>
-                    <p class="preco">R$ 50,00</p>
-                    <label for="quantidade">Quantidade:</label>
-                    <input type="number" id="quantidade" name="quantidade" min="1" value="1">
-                </div>
-            </div>
-
-            <button class="botao-remover">Remover</button>
-        </div>
-
-        <!-- item 2 -->
-        <div class="item-carrinho">
-            <div class="item">
-                <img src="https://picsum.photos/300/500" alt="Imagem do Produto" class="item-img">
-                <div class="item-info">
-                    <h2>Nome do Produto</h2>
-                    <p class="preco">R$ 50,00</p>
-                    <label for="quantidade">Quantidade:</label>
-                    <input type="number" id="quantidade" name="quantidade" min="1" value="1">
-                </div>
-            </div>
-
-            <button class="botao-remover">Remover</button>
-        </div>
+        <div class="carrinho-produtos"></div>
 
         <div class="total">
-            <p>Total: R$ 50,00</p>
+            <p>Total: <span class="total-compra"></span></p>
             <button class="botao-comprar">Finalizar Compra</button>
         </div>
     </main>
 
     <script>
 
-        let carrinho = localStorage.getItem("carrinho");
+        let carrinho = localStorage.getItem("carrinho")
         
         carrinho = JSON.parse(carrinho);
         console.log(carrinho)
 
-        elementosCarrinho = carrinho.length
+        elementosNoCarrinho = carrinho.length
 
-        for (let i = 0; i < elementosCarrinho; i++) {
-            criarItemCarrinho()
+
+        for (let i = 0; i < elementosNoCarrinho; i++) {            
+            criarItemCarrinho(carrinho[i])
         }
 
-        function criarItemCarrinho(){
+        function criarItemCarrinho(itemLista) {
+            
             let itemCarrinho = document.createElement('div')
-            itemCarrinho.classList.add = 'item-carrinho'
+            //itemCarrinho.classList.add = 'item-carrinho';
+            itemCarrinho.classList.add('item-carrinho')
 
             let item = document.createElement('div')
-            item.classList.add = 'item'
+            //item.classList.add = 'item';
+            item.classList.add('item')
+
+            let image = document.createElement('img')
+            image.src = "https://picsum.photos/300/500"
+            image.classList.add('item-img')
+            item.appendChild(image)
 
             let itemInfo = document.createElement('div')
-            itemInfo.classList.add = 'item-info'
+            itemInfo.classList.add('item-info')
 
             let nomeProduto = document.createElement('h2')
-            nomeProduto.textContent = 'teste'
+            nomeProduto.textContent = itemLista.nome
 
             let precoProduto = document.createElement('p')
-            precoProduto.classList.add = 'p'
-            precoProduto.textContent = '10,00'
+            precoProduto.classList.add('preco')
+            precoProduto.textContent = itemLista.preco;
+
+            let quantidadeProduto = document.createElement('input')
+            quantidadeProduto.id = "quantidade"
+            quantidadeProduto.type = "number"
+            quantidadeProduto.value = itemLista.quantidade
 
             itemInfo.appendChild(nomeProduto)
             itemInfo.appendChild(precoProduto)
+            itemInfo.appendChild(quantidadeProduto)
+
+            let remover = document.createElement('button')
+            remover.classList.add('botao-remover')
+            remover.textContent = "Remover"
+            
 
             item.appendChild(itemInfo)
             itemCarrinho.appendChild(item)
+            itemCarrinho.appendChild(remover)
 
-            let carrinho = document.querySelector('.carrinho')
-            carrinho.appendChild(ItemCarrinho)
+            let carrinho = document.querySelector('.carrinho-produtos')
+            carrinho.appendChild(itemCarrinho)
+
+            remover.addEventListener('click', ()=>{
+                itemCarrinho.remove(itemCarrinho)
+
+                let carrinho = localStorage.getItem('carrinho')
+                carrinho = JSON.parse(carrinho);
+
+                carrinho.forEach((produto, index) => {
+                    if (produto.nome == itemLista.nome){
+                        carrinho.splice(index, 1)
+                    }
+                });
+
+                carrinho = JSON.stringify(carrinho)
+                localStorage.setItem('carrinho', carrinho)
+
+            })
+
         }
+
+        function atualizarTotal(){
+            let carrinho = localStorage.getItem('carrinho')
+            carrinho = JSON.parse(carrinho)
+
+            carrinho.forEach((produto, index)=>{  // R$ 100,00 -> 100.00
+                let preco = produto.preco
+                preco = preco.replace('R$', '')
+                preco = preco.replace(',', '.')
+
+                let quantidade = produto.quantidade
+                total += (quantidade*preco)
+            })
+
+            let totalCompra = document.querySelector('.total-compra')
+            totalCompra.textContent = total
+        }
+        atualizarTotal()
 
     </script>
 
