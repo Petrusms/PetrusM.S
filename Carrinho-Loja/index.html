@@ -50,19 +50,19 @@
 
   <script>
 
-    const produtoItemNome  = document.querySelectorAll('.produto-item h2');
-    const produtoItemPreco = document.querySelectorAll('.produto-item .preco');
-    const produtoItemBtn   = document.querySelectorAll('.produto-item a');
+    const produtoItemNome  = document.querySelectorAll('.produto-item h2')
+    const produtoItemPreco = document.querySelectorAll('.produto-item .preco')
+    const produtoItemBtn   = document.querySelectorAll('.produto-item a')
 
     for (let index = 0; index < 4; index++) {
       
       produtoItemBtn[index].addEventListener('click', (evento) => {
 
-      evento.preventDefault(); //para evitar que o link vá para a página antes de executar a logica
+      evento.preventDefault() //para evitar que o link vá para a página antes de executar a logica
 
-      let carrinho = obterTodosProdutos();
+      let carrinho = obterTodosProdutos()
 
-      let produtoJaExiste = false;
+      let produtoJaExiste = false
 
       for (let j = 0; j < carrinho.length; j++) {
 
@@ -70,8 +70,8 @@
 
           console.log(carrinho[j].nome)
 
-          carrinho[j].quantidade++;
-          produtoJaExiste = true;
+          carrinho[j].quantidade++
+          produtoJaExiste = true
         }
       }
 
@@ -79,36 +79,31 @@
         
         let produto = {
           "nome": produtoItemNome[index].textContent,
-          "preço": produtoItemPreco[index].textContent,
+          "preco": produtoItemPreco[index].textContent,
           "quantidade": 1
         }
 
-        carrinho.push(produto);
+        carrinho.push(produto)
       }
 
-      localStorage.setItem('carrinho', JSON.stringify(carrinho));
+      localStorage.setItem('carrinho', JSON.stringify(carrinho))
 
-      });
-
+      })
     }
 
 
     function obterTodosProdutos(){
 
-      let carrinho = JSON.parse(localStorage.getItem('carrinho'));
+      let carrinho = JSON.parse(localStorage.getItem('carrinho'))
       console.log(carrinho)
 
       if(carrinho == null || carrinho.length < 1){
-        carrinho = [];
+        carrinho = []
       }
 
-      return carrinho;
+      return carrinho
 
     }
-
-
-
-
 
   </script>
 </body>
