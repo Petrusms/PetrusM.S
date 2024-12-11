@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carrinho de Compras</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -24,7 +24,7 @@
         <div class="carrinho-produtos"></div>
 
         <div class="total">
-            <p>Total: <span class="total-compra"></span></p>
+            <p>Total: R$<span class="total-compra"></span></p>
             <button class="botao-comprar">Finalizar Compra</button>
         </div>
     </main>
@@ -37,7 +37,7 @@
         console.log(carrinho)
 
         elementosNoCarrinho = carrinho.length
-
+        atualizarContador(elementosNoCarrinho)
 
         for (let i = 0; i < elementosNoCarrinho; i++) {            
             criarItemCarrinho(carrinho[i])
@@ -109,22 +109,27 @@
         }
 
         function atualizarTotal(){
-            let carrinho = localStorage.getItem('carrinho')
-            carrinho = JSON.parse(carrinho)
-
-            carrinho.forEach((produto, index)=>{  // R$ 100,00 -> 100.00
-                let preco = produto.preco
-                preco = preco.replace('R$', '')
-                preco = preco.replace(',', '.')
-
-                let quantidade = produto.quantidade
-                total += (quantidade*preco)
-            })
-
+            let carrinho = JSON.parse(localStorage.getItem('carrinho'));
+            let total = 0;
+            carrinho.forEach((produto) => {
+                let preco = produto.preco;
+                preco = preco.replace('R$','')
+                preco = preco.replace(',','.')
+                let quantidade = produto.quantidade;
+                total += preco *quantidade;
+                
+            });
             let totalCompra = document.querySelector('.total-compra')
-            totalCompra.textContent = total
+            totalCompra.textContent = total;
         }
-        atualizarTotal()
+
+        atualizarTotal();
+
+        function atualizarContador(contador) {
+            const totalProdutos = carrinho.reduce((total, produto) => total + produto.quantidade, 0);
+            document.querySelector('.contador').textContent = totalProdutos;
+        }
+        atualizarContador(carrinho.length);
 
     </script>
 
