@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+
+        body {
+            display: flex;
+            justify-content: center; 
+            align-items: center; 
+            height: 100vh; 
+            margin: 0; 
+        }
+
+    
+        .erro {
+            color: tomato;
+            display: none;
+        }
+
+        .grupo {
+            padding: 10px;
+        }
+
+        .grupo-enviar {
+            text-align: center;
+            padding-right: 20px;
+        }
+
+        input {
+            outline: none;
+        }
+
+        input.invalido {
+            border: solid 2px tomato;
+        }
+
+        .mostrando{
+            visibility: none;
+        }
+
+        .login {
+            flex-wrap: wrap;
+            background-color: gainsboro;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="login">
+        <div class="texto">
+            <h1>Seja bem-vindo</h1>
+        </div>
+        
+        <form action="">
+            
+            <div class="grupo">
+                <input type="text" placeholder="informe seu nome">
+                <span class="erro">o nome deve ter pelo menos três caracteres</span>
+            </div>
+
+            <div class="grupo">
+                <input type="text" placeholder="inform seu e-mail">
+                <span class="erro">o email precisa ser válido</span>
+            </div>
+
+            <div class="grupo">
+                <input type="password" placeholder="informe sua senha">
+                <a class="ocultado"><i class="bi bi-eye-slash"></i></a>
+                <span class="erro">a senha precisa ter 8 caracteres </span>
+            </div>
+
+            <div class="grupo">
+                <input type="password" placeholder="confirme sua senha">
+                <span class="erro">a confirmação não corresponde à senha</span>
+            </div>
+
+            <div class="grupo-enviar">
+                <input type="submit" value="enviar">
+            </div>
+
+        </form>
+    </div>
+    
+
+    <script>
+        const inputs = document.querySelectorAll('input');
+        const erros = document.querySelectorAll('.erro') 
+
+        function validaNome(){
+            if(inputs[0].value.length < 3){
+                erros[0].style.display = 'block'
+                inputs[0].classList.add('invalido')
+            } else {
+                erros[0].style.display = 'none'
+                inputs[0].classList.remove('invalido')
+            }
+        }
+        inputs[0].addEventListener('input', validaNome)
+
+        function validaEmail(){
+            const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+            if(!emailRegex.test(inputs[1].value)){
+                erros[1].style.display = 'block'
+                inputs[1].classList.add('invalido')
+            } else {
+                erros[1].style.display = 'none'
+                inputs[1].classList.remove('invalido')
+            }
+        }
+        inputs[1].addEventListener('input', validaEmail)
+
+        function validaSenha(){
+            const senhaRegex = /^(?=.*[A-Z])(?=.*[!@#$%^&*])[A-Za-z\d!@#$%^&*]{8,}$/;
+
+            if(!senhaRegex.test(inputs[2].value)){
+                erros[2].style.display = 'block'
+                inputs[2].classList.add('invalido')
+            } else {
+                erros[2].style.display = 'none'
+                inputs[2].classList.remove('invalido')
+            }
+        }
+        inputs[2].addEventListener('input', validaSenha)
+
+        function confirmarSenha(){
+            if(inputs[3].value != inputs[2].value){
+                erros[3].style.display = 'block'
+                inputs[3].classList.add('invalido')
+            } else {
+                erros[3].style.display = 'none'
+                inputs[3].classList.remove('invalido')
+            }
+        }
+        inputs[2].addEventListener('input', confirmarSenha)
+
+        document.querySelector('form').addEventListener('submit', (event)=>{
+            event.preventDefault()
+            validaNome()
+            validaEmail()
+            validaSenha()
+            confirmarSenha()
+        });
+
+        document.querySelector('.ocultado').addEventListener('click', ()=>{
+            const tipoAtual = inputs[2].getAttribute('type');
+            const tipo = tipoAtual === 'password' ? 'text' : 'password';
+            if (tipoAtual === 'password'){
+                    document.querySelector('.ocultado').innerHTML = '<i class="bi bi-eye"></i>'; 
+                }else{
+                    document.querySelector('.ocultado').innerHTML = '<i class="bi bi-eye-slash"></i>'; 
+                }
+
+            inputs[2].setAttribute('type', tipo);
+        })
+
+    </script>
+
+</body>
+</html>
