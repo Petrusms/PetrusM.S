@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barber Shop</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="splash" id="splash">
+        <img src="images/logo.jfif" alt="">
+    </div>
+    <!-- Seção login-->
+    <div class="content" id="content" style="display: none;">
+        <div class="login">
+            <h1>Seja bem-vindo</h1>
+            
+            <form action="">
+                
+                <div class="grupo">
+                    <input type="text" placeholder="Informe seu nome" required>
+                    <span class="erro">O nome deve ter pelo menos três caracteres</span>
+                </div>
+    
+                <div class="grupo">
+                    <input type="email" placeholder="Informe seu e-mail" required>
+                    <span class="erro">O email precisa ser válido</span>
+                </div>
+    
+                <div class="grupo">
+                    <div class="senha-container">
+                        <input type="password" placeholder="Informe sua senha" required>
+                        <a class="ocultado"><i class="bi bi-eye-slash"></i></a>
+                    </div>
+                    <span class="erro">A senha precisa ter pelo menos 8 caracteres</span>
+                </div>
+    
+                <div class="grupo">
+                    <input type="password" placeholder="Confirme sua senha" required>
+                    <span class="erro">A confirmação não corresponde à senha</span>
+                </div>
+    
+                <div class="grupo-enviar">
+                    <input type="submit" value="Enviar">
+                </div>
+    
+            </form>
+        </div>
+
+        <!-- Seção de boas-vindas -->
+        <div class="welcome" id="welcome" style="display: none;">
+            <h1>Seja bem-vindo, <span id="userName"></span>!</h1>
+            <div class="images">
+                <img src="images/barba.png" alt="">
+                <img src="images/cabelo.png" alt="">
+                <img src="images/barbaCabelo.jfif" alt="">
+                <img src="images/platinar.png" alt="">
+                <img src="images/sombrancelha.png" alt="">
+            </div>
+        </div>
+        <script src="login.js"></script>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
